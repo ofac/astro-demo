@@ -2,12 +2,12 @@
 const {title, desc} = Astro.props
 ---
 
-<article class="p-4 bg-emerald-800 max-w-sm text-white rounded">
+<article class="p-4 bg-emerald-800 max-w-xs text-white rounded">
     <h2 class="text-2xl text-center my-4">{title}</h2>
-    <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-    <p class="text-xl">{desc}</p>
-    <p>
+    <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="rounded my-4" alt="">
+    <p class="text-xl mb-2">{desc}</p>
+    <p class="text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, qui error voluptate laboriosam consequatur similique pariatur iusto molestiae, dolorem repellendus dolorum? Quidem, soluta recusandae officiis consectetur adipisci laudantium quos corporis!
     </p>
-    <p>13-03-2024</p>
+    <p class="font text-xs text-yellow-400 my-4">13-03-2024</p>
 </article>
