@@ -14,20 +14,28 @@ import Post from '../components/Post.astro'
 		<h1 class="text-4xl text-center m-4">Astro</h1>
 		<section class="flex flex-row gap-2 flex-wrap justify-center items-center">
 			<Post 
-				title="Title 01"
-				desc="Post Description 1"
+				post = {{
+					title: "Title 01",
+					desc: "Post Description 1"
+				}}
 			/>
 			<Post 
-				title="Title 02"
-				desc="Post Description 2"
+				post = {{
+					title: "Title 02",
+					desc: "Post Description 2"
+				}}
 			/>
 			<Post 
-				title="Title 03"
-				desc="Post Description 3"
+				post = {{
+					title: "Title 03",
+					desc: "Post Description 3"
+				}}
 			/>
 			<Post 
-				title="Title 04"
-				desc="Post Description 4"
+				post = {{
+					title: "Title 04",
+					desc: "Post Description 4"
+				}}
 			/>
 
 		</section>
