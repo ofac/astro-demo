@@ -1,13 +1,13 @@
 ---
-const { post: {title, desc} } = Astro.props
+const { post: {title, description, content, created_at} } = Astro.props
 ---
 
-<article class="p-4 bg-emerald-800 max-w-xs text-white rounded">
+<article class="p-4 bg-emerald-800 max-w-xs min-h-[540px] text-white rounded">
     <h2 class="text-2xl text-center my-4">{title}</h2>
     <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="rounded my-4" alt="">
-    <p class="text-xl mb-2">{desc}</p>
-    <p class="text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, qui error voluptate laboriosam consequatur similique pariatur iusto molestiae, dolorem repellendus dolorum? Quidem, soluta recusandae officiis consectetur adipisci laudantium quos corporis!
+    <p class="text-xl mb-2">{description}</p>
+    <p class="text-justify text-sm">
+        {content.slice(0,180)}...
     </p>
-    <p class="font text-xs text-yellow-400 my-4">13-03-2024</p>
+    <p class="font text-xs text-yellow-400 my-4">{new Date(created_at).toLocaleDateString() }</p>
 </article>

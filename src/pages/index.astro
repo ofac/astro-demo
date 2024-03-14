@@ -1,5 +1,8 @@
 ---
+import { postcss } from 'tailwindcss'
 import Post from '../components/Post.astro'
+const response = await fetch('http://localhost:3000/posts')
+const posts = await response.json()
 ---
 
 <html lang="en">
@@ -11,33 +14,11 @@ import Post from '../components/Post.astro'
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1 class="text-4xl text-center m-4">Astro</h1>
+		<h1 class="text-4xl text-center font-bold m-4">My Posts</h1>
 		<section class="flex flex-row gap-2 flex-wrap justify-center items-center">
-			<Post 
-				post = {{
-					title: "Title 01",
-					desc: "Post Description 1"
-				}}
-			/>
-			<Post 
-				post = {{
-					title: "Title 02",
-					desc: "Post Description 2"
-				}}
-			/>
-			<Post 
-				post = {{
-					title: "Title 03",
-					desc: "Post Description 3"
-				}}
-			/>
-			<Post 
-				post = {{
-					title: "Title 04",
-					desc: "Post Description 4"
-				}}
-			/>
-
+		{
+			posts.map(post => <Post post={post} />)
+		}
 		</section>
 	</body>
 </html>
