@@ -6,6 +6,13 @@ const posts = await response.json()
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 <DefaultLayout>
+
+	<meta slot="header" charset="utf-8" />
+	<link slot="header" rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta slot="header" name="viewport" content="width=device-width" />
+	<meta slot="header" name="generator" content={Astro.generator} />
+	<title slot="header">My Posts</title>
+
 	<h1 class="text-4xl text-center font-bold m-4">My Posts</h1>
 	<section class="flex flex-row gap-2 flex-wrap justify-center items-center">
 	{
